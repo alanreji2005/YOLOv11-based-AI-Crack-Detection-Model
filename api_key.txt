@@ -1,0 +1,7 @@
+!pip install roboflow
+
+from roboflow import Roboflow
+rf = Roboflow(api_key="a6vEagWR3RBuPyN7uQmB")
+project = rf.workspace("arjun-elh2g").project("underwater-crack-detection-owcch")
+version = project.version(10)
+dataset = version.download("yolov11")
